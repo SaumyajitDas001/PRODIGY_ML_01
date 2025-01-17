@@ -1,0 +1,39 @@
+Outcomes:
+Mean Squared Error (MSE): 2806426667.247853
+R² Score: 0.6341189942328371
+
+The Predicted Prices Are shown in predicted_prices.csv ..
+
+Here I am Discussing how to Increase the Overall Accuracy of Linear Regression Model.
+
+1. Feature Engineering
+Increase the number of features: Bring in more correlated features like YearBuilt, TotalBsmtSF, GarageArea, etc., as expected by putting together descriptions into your dataset.
+Create new features: Use existing features to make new features (like TotalBathrooms = FullBath + HalfBath * 0.5 + BsmtFullBath + BsmtHalfBath * 0.5).
+Scale the features: Normalize or standardize features-one may do so especially since models may be sensitive to change.
+Categorical encoding: Convert categorical features, for example, Neighborhood or MSZoning, into numerical values by using techniques like one-hot encoding or ordinal encoding.
+
+2. Handle Missing Values
+Have an explanation of why values are missing. Intelligently fill in missing values:
+Mean/Median imputation for numerical features.
+Mode imputation for categorical features.
+Advanced methods: egKNN imputation.
+
+3. Outlier Detection
+Remove or treat outliers in high impact numerical columns such as GrLivArea, SalePrice, etc.
+Techniques to remove outliers include Z-score and ComMerchant's IQR (Interquartile Range) method.
+
+4. Use advanced models instead of the Linear Regression
+Such advanced models could be and not limited to:
+Decision Trees or Random Forests.
+Gradient Boosting methods (e.g. XGBoost, LightGBM, and CatBoost).
+Neural Networks for more complicated patterns.
+Also, multi-modeling and combining.
+
+5. Hyperparameter Tuning
+Optimum tuning of parameters in models by grid search or randomized search.
+
+6. Cross Validation
+It ensures that k-fold cross-validation will deliver an optimum model performance for application on unseen data 
+
+7. Address Multicollinearity 
+Removal or combination of highly correlated features in avoiding redundancy and overfitting.
